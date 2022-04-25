@@ -57,5 +57,13 @@ function startGame() {
 	getNewQuestion();
 };
 
+//Call new question each time one question is completed
+function getNewQuestion() {
+    questionCounter++;
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionsIndex];
+    question.innerText = currentQuestion.question;
+};
+
 startGame();
 
