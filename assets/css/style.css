@@ -86,3 +86,47 @@ h1 , h2 {
     transition: transform 150ms;
     transform: scale(1.1);
 }
+
+/* Container for choices under question */
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 60vw;
+    border-radius: 4px;
+    font-size: 3rem;
+    min-width: 80rem;
+    background: grey;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow:  0 0.4rem 1.4rem 0 darkgrey;
+    transform: scale(1.05);
+    transition: transform 100ms;
+}
+
+#question {
+    font-size: 3rem;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    background-color: darkgray;
+    color: white;
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+/* Red or green highlights for the wrong or right answer */
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
