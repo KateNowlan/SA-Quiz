@@ -4,7 +4,7 @@ const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const scoreText = document.getElementById("score");
 const progressText = document.getElementById("progressText");
-
+const progressBarFull = document.getElementById("progressBarFull");
 
 
 //Call the various functions created
