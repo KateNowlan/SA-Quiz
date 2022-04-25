@@ -146,3 +146,22 @@ h1 , h2 {
 .hud-main-text {
     text-align: center;
 }
+
+/* Progress bar added to help user keep track of progress */
+
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid black;
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+/* Fills up 25% after each question is answered */
+
+#progressBarFull {
+    height: 3.4rem;
+    background: black;
+    width: 0%;
+}
