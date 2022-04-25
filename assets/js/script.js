@@ -2,6 +2,10 @@
 //Create basic const functions
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
+const scoreText = document.getElementById("score");
+const progressText = document.getElementById("progressText");
+
+
 
 //Call the various functions created
 let currentQuestion = {};
@@ -64,6 +68,8 @@ function getNewQuestion() {
 		return window.location.assign('end.html');
     };
     questionCounter++;
+	progressText.innerText = `Question ${questionCounter}/${TOTAL_QUESTIONS}`;
+
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
     question.innerText = currentQuestion.question;
@@ -90,6 +96,10 @@ choices.forEach(choice => {
 
 		const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
+		if (classToApply == 'correct') {
+			incrementScore(POINTS);
+		}
+
 		selectedChoice.parentElement.classList.add(classToApply);
 
 		setTimeout(function () {
@@ -98,6 +108,12 @@ choices.forEach(choice => {
 		}, 1000);
 	});
 });
+
+//Adds score to live score tracker
+incrementScore = num => {
+	score += num;
+	scoreText.innerText = score;
+};
 
 startGame();
 
