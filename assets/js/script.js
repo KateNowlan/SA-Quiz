@@ -59,6 +59,10 @@ function startGame() {
 
 //Call new question each time one question is completed
 function getNewQuestion() {
+    if (availableQuestions.length === 0 || questionCounter > TOTAL_QUESTIONS) {
+        // go to end page when finished
+		return window.location.assign('end.html');
+    };
     questionCounter++;
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
@@ -74,6 +78,20 @@ availableQuestions.splice(questionsIndex, 1);
 acceptingAnswers = true;
 
 };
+
+//Determine correct or incorrect result
+choices.forEach(choice => {
+	choice.addEventListener("click", function(event) {
+		if (!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+		const selectedChoice = event.target;
+		const selectedAnswer = selectedChoice.dataset['number'];
+
+        getNewQuestion();
+
+    });
+});
 
 startGame();
 
