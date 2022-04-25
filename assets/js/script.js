@@ -45,3 +45,17 @@ let questions = [
 	},
 ];
 
+//Create points for correct answers and maximum question count
+const POINTS = 100;
+const TOTAL_QUESTIONS = 4;
+
+//Start game function
+function startGame() {
+	questionCounter = 0;
+	score = 0;
+	availableQuestions = [...questions];
+	getNewQuestion();
+};
+
+startGame();
+
