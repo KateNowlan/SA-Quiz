@@ -5,7 +5,7 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const scoreText = document.getElementById("score");
 const progressText = document.getElementById("progressText");
 const progressBarFull = document.getElementById("progressBarFull");
-
+const timerSpan = document.getElementById("timer");
 
 //Call the various functions created
 let currentQuestion = {};
@@ -52,6 +52,9 @@ let questions = [
 //Create points for correct answers and maximum question count
 const POINTS = 100;
 const TOTAL_QUESTIONS = 4;
+
+let currentTime = 25;
+let timer = null;
 
 //Start game function
 function startGame() {
