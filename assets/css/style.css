@@ -212,3 +212,209 @@ form {
     font-size: 3rem;
     margin-bottom: 0.5rem;
 }
+
+/*Media query for screens of 900px and down*/
+@media screen and (max-width: 900px) {
+    
+    #game {
+        width: 100%;
+    }
+
+    .container {
+        width: 55rem;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    #hud {
+        justify-content: space-between;
+    }
+    
+    .choice-container {
+        min-width: 100%;
+    }
+
+    .choice-text {
+        width: 90%;
+    }
+    
+    h1 {
+        font-size: 4rem;
+    }
+
+    input {
+        width: 35rem;
+        height: 5.5rem;
+    }
+
+    .btn {
+        width: 35rem;
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+
+    #progressBar {
+        width: 15rem;
+        height: 2rem;
+        border: 0.2rem solid black;
+        margin-top: 2rem;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+}
+
+/*Media query for screens of 1200px and down*/
+@media screen and (max-width: 1200px) {
+    
+    #game {
+        width: 100%;
+    }
+
+    .container {
+        width: 65rem;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    #hud {
+        justify-content: space-between;
+    }
+    
+    .choice-container {
+        min-width: 90%;
+    }
+
+    .choice-text {
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    input {
+        width: 35rem;
+        height: 5.5rem;
+    }
+
+    .btn {
+        width: 35rem;
+        font-size: 3rem;
+        padding: 1rem;
+    }
+
+    #progressBar {
+        width: 18rem;
+        height: 2.5rem;
+        border: 0.2rem solid black;
+        margin-top: 2rem;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+}
+
+/*Media query for screens of 700px and down*/
+@media screen and (max-width: 700px) {
+    
+    #game {
+        width: 90%;
+    }
+
+    input {
+        width: 20rem;
+        height: 5rem;
+    }
+
+    .container {
+        width: 35rem;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    #hud {
+        justify-content: space-between;
+    }
+    
+    .choice-container {
+        min-width: 100%;
+    }
+
+    .choice-text {
+        width: 50%;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        width: 20rem;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    #progressBar {
+        width: 12rem;
+        height: 2rem;
+        border: 0.2rem solid black;
+        margin-top: 2rem;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+}
+
+
+/*Media query for screens of 400px and down*/
+@media screen and (max-width: 400px) {
+    
+    #game {
+        width: 95%;
+    }
+
+    .container {
+        width: 30rem;
+        margin: 0 auto;
+    }
+
+    #hud {
+        justify-content: space-between;
+    }
+
+    #title {
+        font-size: 3rem;
+    }
+    
+    .choice-container {
+        min-width: 100%;
+    }
+
+    .choice-text {
+        width: 80%;
+    }
+
+    input {
+        width: 18rem;
+        height: 4.5rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        width: 18rem;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    #progressBar {
+        width: 10rem;
+        height: 2rem;
+        border: 0.2rem solid black;
+        margin-top: 2rem;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+}
+
+
