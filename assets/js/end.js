@@ -5,7 +5,7 @@ const saveScoreBtn = document.getElementById("saveScoreBtn");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 const finalScore = document.getElementById("finalScore");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-
+const MAX_HIGH_SCORES = 4;
 
 //save and display final score on end page
 finalScore.innerText = `You scored ${mostRecentScore}`;
@@ -30,4 +30,9 @@ saveHighScore = e => {
     });
 
     highScores.splice(5);
+
+    //update high scores
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+    //return to home page after saving name and high score
+    window.location.assign('index.html');
 };
