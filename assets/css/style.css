@@ -181,3 +181,22 @@ h1 , h2 {
     align-items: center;
     max-width: 30rem;
 }
+
+/* Save button to save user score and send to leaderboard */
+
+input {
+    margin-bottom: 1rem;
+    width: 30rem;
+    padding: 1.5rem;
+    font-size: 2.5rem;
+    border: none;
+    box-shadow: 0 0.4rem 1.4rem 0 darkgrey;
+    border-radius: 5px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
