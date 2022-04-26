@@ -1,108 +1,180 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# SA Quiz
 
-Welcome KateNowlan,
+## Introduction
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+SA Quiz is designed to test the broad knowledge South African enthusiasts. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The quiz site offers all the information users need to know about the quiz. This includes starting the quiz, the user's name,how many points you're accumulating,your time left on each progress and your progress through the set of questions.And finally, saving your high score and saving it into the leaderboard.
 
-## Gitpod Reminders
+Website's live link [SA Quiz](https://katenowlan.github.io/SA-Quiz/index.html)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+  ![image for responsiveness and how it fits different screen sizes](assets/images/amiresponsive.png)
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## UX
 
-Another blue button should appear to click: _Open Browser_.
+### The Strategy Plane
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### Site Goals
+* To provide users with a fun and easy game to play.
+* To ensure that navigating the site is easy and intuitive.
+* To provide users with alternative difficulty levels.
+* To ensure the game is fully responsive on all screen sizes.
 
-A blue button should appear to click: _Make Public_,
+### The Scope Plane
 
-Another blue button should appear to click: _Open Browser_.
+**Features Planned:**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* Responsive Design - The site should function correctly across all screen sizes.
+* The site should be visually enticing.
+* The game should be clear from the outset it is a quiz.
 
-To log into the Heroku toolbelt CLI:
+### The Skeleton Plane
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Wireframe mockup 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+##### Main home page
+![Main home page Wireframe](assets/images/wireframe-home.png)
 
-------
+##### Main quiz page
+![Main quiz Wireframe](assets/images/wireframe-game.png)
 
-## Release History
+### The Surface Plane
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+#### Design
+I wanted to keep the colors minimal as to make it accesible to those with poorer/impaired vision.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+##### Background Image
+For the background i used a picture of the South African flag.This sets the theme and i feel is very apt and is not in contrast with the font or container housing the quiz as the container is grey and font black so this is great for users with any vision issues.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Font Used:
+  The font family used throughout this site is [Roboto](https://fonts.google.com/specimen/Roboto)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Structure Plane
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+# Features
+### SA Quiz consists of four separate HTML files: 
+* A quiz introduction/starting page
+     * The quiz introduction page has to "play" and "leaderboard" buttons.The "play" button enables you to start the quiz.
+* The main quiz page
+     * The main quiz page contains all the quiz questions and answers. It also shows your progress in a progress bar as well as having a timer for each question.
+* The end page
+     * The end page shows how many points you scored throughout the game.It allows you to enter your name and save your score,which will be on the leaderboard on the home page.There is a button to allow you to go home and a button allowing you to play again.
+* Leaderboard page for scores
+     * On the home page there is a button for Leaderboard. If you click this you will be taken to the page where it will show the top five highest scores.     
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Quiz Introduction(home) Page
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![image for quiz introduction/home page](assets/images/home-page.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+* ### Start Quiz
+ 
+   * By clicking the play button, the user will start the quiz.
+  
+  ![image for play button](assets/images/play-button.png)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+ ## Main Quiz Page
+  ![image for main quiz page](assets/images/quiz-page.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+ * ### Quiz Question Counter and Progress bar
+    ![image for quiz question count and progress bar](assets/images/progress-bar.png)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+   * Users can keep track of the number of questions left.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+ * ### Quiz Scoring Points
+     ![image for scoring of points](assets/images/score.png)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+   * For each correct answer you are allocated 100 points.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+ * ### Questions And Answers
+   * The quiz has four questions in total.
+   * Each question has four choices.
+   * The background color will turn green if the user answers correctly, and red if the user answers incorrectly.
+   * After you have asnwered a question the next one will come up.
+   * After answering all the questions, the user will be taken to the end page.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+* ### End Page
+   ![image for users result](assets/images/end-page.png)
 
-------
+  * The user can see how many points they scored.
+  * They have the option to enter their name and save their score.  
+    ![image for entering username and saving score](assets/images/username-button.png)
+  * The user has the option to then either play again or go back to the home page,where you can check your scores on the leadboard.
 
-## FAQ about the uptime script
+    ![image for play again or go home](assets/images/play-home.png)
 
-**Why have you added this script?**
+* ### End Page
+   ![image for leaderboard page](assets/images/leaderboard-page.png)
+   * Users can click on leaderboard to be redirected to this page where they can see their score. This leaderboard will hold up to 5 of the highest scores. Once user is done they can click home and will be redirected there.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### **Testing**
+ -   This website works works on :
 
-**How will this affect me?**
+ Screens 400px and below
+ 
+ Screens 700px and below
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+ Screens 900px and below
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+ Screens 1200px and below
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+ Screens 1200 and above
 
-**So….?**
+__Validator Testing__
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+   - W3C HTML
 
-**Can I opt out?**
+![W3C HTML validator](assets/images/w3c-html-validator.png)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+   - CSS Jigsaw
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+   ![W3C CSS validator](assets/images/css-validator.png)
 
-**Anything more?**
+   - Javascript JSHint
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+   ![JSHint javascript validator](assets/images/jshint-validator.png)
 
----
+   - Lighthouse 
 
-Happy coding!
+    
+    - Mobile screenshot
+
+![lighthouse mobile](assets/images/mobile-lighthouse.png) 
+
+    
+    - Desktop screenshot
+    
+![lighthouse desktop](assets/images/desktop-lighthouse.png)
+
+
+  The website was tested on the following platforms to see if it worked:
+  * Chrome
+  * Safari
+   
+   ## Clone and Fork
+
+### Clone 
+
+* In Github, click on the project that you want to clone.
+* Click to copy the URL.
+* Open a new terminal.
+* Change the current working directory to the location that you want the cloned directory.
+* Type 'git clone' and paste the copied URL.
+* Press 'Enter' to clone.
+
+### Fork
+
+* In Github, click on the project that you wish to fork.
+* Click on the 'Fork' button at the top right of the page.
+
+## Research
+
+ * Websites sourced from Google used for information were:
+ - Stack overflow
+ - W3C
+
+ ## Credit
+
+ * Thanks must go to my mentor Okwudiri Okoro for all his guidance.
+
+
