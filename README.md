@@ -107,8 +107,9 @@ For the background i used a picture of the South African flag.This sets the them
    ![image for leaderboard page](assets/images/leaderboard-page.png)
    * Users can click on leaderboard to be redirected to this page where they can see their score. This leaderboard will hold up to 5 of the highest scores. Once user is done they can click home and will be redirected there.
 
-### **Testing**
- -   This website works works on :
+# Testing
+
+ * This website works works on :
 
  Screens 400px and below
  
@@ -146,10 +147,28 @@ __Validator Testing__
     
 ![lighthouse desktop](assets/images/desktop-lighthouse.png)
 
+##  Testing
 
+  * I tested the site as i went along the whole way through developing it to make sure each stage worked before i moved onto the next thing.
+
+  ## Bugs
+
+  * In the development of the site i struggled for a while to get a timer to work as i wasnt putting the js code in the right place, but i managed to sort this out completely and it works perfectly.
+
+  ## Browser Testing
+  
   The website was tested on the following platforms to see if it worked:
   * Chrome
   * Safari
+
+  ## Deployment
+
+  * In Github locate your repository and click on it
+  * Click on 'Settings'
+  * On the left side of the page click 'Pages'
+  * In Source select 'Main' from the drop down list
+  * Make sure its being saved as Root folder
+  * Click Save
    
    ## Clone and Fork
 
