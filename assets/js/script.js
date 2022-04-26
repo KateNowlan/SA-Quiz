@@ -67,8 +67,11 @@ function getNewQuestion() {
         // go to end page when finished
 		return window.location.assign('end.html');
     };
+
     questionCounter++;
 	progressText.innerText = `Question ${questionCounter}/${TOTAL_QUESTIONS}`;
+	// update progress bar
+	progressBarFull.style.width = `${(questionCounter / TOTAL_QUESTIONS) * 100}%`;
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
@@ -82,6 +85,15 @@ function getNewQuestion() {
 availableQuestions.splice(questionsIndex, 1);
 
 acceptingAnswers = true;
+
+//start timing
+timer = setInterval(() => {
+	timerSpan.innerHTML = currentTime--;
+	if (currentTime == 0) {
+		alert('your time is up');
+		return window.location.assign('index.html');
+	}
+}, 1000);
 
 };
 
@@ -103,8 +115,11 @@ choices.forEach(choice => {
 		selectedChoice.parentElement.classList.add(classToApply);
 
 		setTimeout(function () {
-			selectedChoice.parentElement.classList.remove(classToApply);
-			getNewQuestion();
+		selectedChoice.parentElement.classList.remove(classToApply);
+		getNewQuestion();
+		//clear the timer
+		clearInterval(timer);
+		currentTime = 25;
 		}, 1000);
 	});
 });
