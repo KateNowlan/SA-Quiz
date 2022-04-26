@@ -67,6 +67,8 @@ function startGame() {
 //Call new question each time one question is completed
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter > TOTAL_QUESTIONS) {
+		//save score when finished game
+		localStorage.setItem("mostRecentScore", score);
         // go to end page when finished
 		return window.location.assign('end.html');
     };
